@@ -1,7 +1,7 @@
 import uuid
 import asyncio
 from crawler_module.algorithms.algorithm_factory import AlgorithmFactory
-from configs.settings import DEFAULT_ALGORITHM
+from service_configs.settings import DEFAULT_ALGORITHM
 from fastapi import HTTPException
 
 tasks = (
