@@ -10,7 +10,7 @@ asgiref>=3.2.10
 pytest>=7.4.4
 pytest-asyncio>=0.23.4
 aioresponses
-pyppeteer==2.1.1
+pyppeteer
 requests
 httpx
 
