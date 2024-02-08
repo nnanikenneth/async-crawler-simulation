@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+package-lock.json
+#ignore production build directory
+/dist
+
 # production
 /build
 
