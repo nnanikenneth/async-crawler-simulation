@@ -27,9 +27,11 @@ The crawler can be configured by modifying files in the config directory ie `net
 #### Starting the Application
 A bash script is provided to automate the setup process. Run the following command in the project's root directory:
 
+- Note: Ensure that the script has execute permissions. You can do this by running: `chmod +x deploy_production.sh`
 ```bash
 ./deploy_script.sh
 ```
+
 This script sets up both the frontend and backend components, making the application ready to use.
 
 #### Installation & Setup
