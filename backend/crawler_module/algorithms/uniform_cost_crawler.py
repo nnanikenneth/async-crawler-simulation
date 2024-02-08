@@ -117,7 +117,7 @@ class UniformCostCrawler(BaseCrawler):
         """
         Processes the content of a fetched page, extracting and enqueuing new URLs to crawl based on their cost.
         """
-        logging.info(f"Visiting URL with task_id {self.task_id} : {url}")
+        # logging.info(f"Visiting URL with task_id {self.task_id} : {url}")
         found_links = []
         if response_data['content']:
             # Pass the entire response_data to the parser, assuming it's adjusted to handle such structure
@@ -129,7 +129,7 @@ class UniformCostCrawler(BaseCrawler):
                     add_to_found_links(full_url, found_links)
 
         self.map_url_to_found_links(url, found_links)
-        logging.info(f"Links found on {url} with task_id {self.task_id}: {found_links}")
+        # logging.info(f"Links found on {url} with task_id {self.task_id}: {found_links}")
 
     def calculate_cost(self, url):
         """
@@ -145,6 +145,7 @@ class UniformCostCrawler(BaseCrawler):
 
 
 # Example usage
+"""
 task_id = 'example_task_001'  # Optional task ID for tracking
 crawler = UniformCostCrawler(base_url="https://monzo.com", task_id=task_id, request_delay=0)
 
@@ -153,3 +154,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+"""

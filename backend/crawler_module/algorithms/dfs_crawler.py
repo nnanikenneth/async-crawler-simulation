@@ -122,7 +122,7 @@ class DFSCrawler(BaseCrawler):
         """
         Processes the content of a fetched page, extracting and scheduling new URLs to crawl.
         """
-        logging.info(f"Visiting URL with task_id {self.task_id}: {url}")
+        # logging.info(f"Visiting URL with task_id {self.task_id}: {url}")
         found_links = []
 
         if response_data['content']:
@@ -133,7 +133,7 @@ class DFSCrawler(BaseCrawler):
                     add_to_found_links(full_url, found_links)
 
         self.map_url_to_found_links(url, found_links)
-        logging.info(f"Links found on {url} with task_id {self.task_id}: {found_links}")
+        # logging.info(f"Links found on {url} with task_id {self.task_id}: {found_links}")
     
     def has_more_urls(self):
         """
@@ -142,6 +142,7 @@ class DFSCrawler(BaseCrawler):
         return bool(self.stack)
 
 # Example usage
+"""
 base_url = 'https://monzo.com'  
 task_id = 'example_task_001'  # Optional task ID for tracking
 max_concurrency = 5 
@@ -152,4 +153,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main()) 
-
+"""

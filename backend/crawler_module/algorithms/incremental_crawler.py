@@ -113,7 +113,7 @@ class IncrementalCrawler(BaseCrawler):
         """
         Processes page content, extracting links within the same domain and adding them to the queue.
         """
-        logging.info(f"Visiting URL with task_id {self.task_id} : {url}")
+        # logging.info(f"Visiting URL with task_id {self.task_id} : {url}")
         found_links = []
         if response_data['content']:
             full_urls = self.page_parser.extract_links_within_domain(response_data, url)
@@ -123,7 +123,7 @@ class IncrementalCrawler(BaseCrawler):
                     add_to_found_links(full_url, found_links)
 
         self.map_url_to_found_links(url, found_links)
-        logging.info(f"Links found on {url} with task_id {self.task_id}: {found_links}")
+        # logging.info(f"Links found on {url} with task_id {self.task_id}: {found_links}")
 
     def has_more_urls(self):
         """
@@ -133,6 +133,7 @@ class IncrementalCrawler(BaseCrawler):
 
 
 # Example usage
+"""
 crawler = IncrementalCrawler("https://monzo.com", revisit_interval=3600, request_delay=0)
 
 async def main():
@@ -140,4 +141,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
+"""
