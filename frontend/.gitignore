@@ -8,7 +8,9 @@
 # testing
 /coverage
 
+# ignore package-lock json file
 package-lock.json
+
 #ignore production build directory
 /dist
 
