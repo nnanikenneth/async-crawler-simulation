@@ -115,7 +115,7 @@ function App() {
           fullWidth
         />
 
-        {<Tooltip title={!isUrlValid && startUrl.length > 0 ? {VALID_URL_MESSAGE} : ""}>
+        {<Tooltip title={!isUrlValid && startUrl.length > 0 ? VALID_URL_MESSAGE : ""}>
           <span>
             <Button
               variant="contained"
