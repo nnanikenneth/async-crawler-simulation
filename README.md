@@ -1,4 +1,4 @@
-# Monzo Simple Web Crawler Application Excercise
+# Simple Async Web Crawler Application
 
 ## Overview
 This simple web crawler is designed to navigate through a website starting from a given URL, visiting each URL found on the same domain. It efficiently avoids external links to ensure focused crawling within the specified domain. Developed using Python for backend logic and React.js for the frontend interface, this application demonstrates basic web crawling and UI interaction capabilities.
